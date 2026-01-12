@@ -25,9 +25,7 @@ export default function Page() {
   for (let i = 0; i < locations.length; i++) {
     const location = locations[i];
     listItems.push(
-      <li key={location.id}>
-        {location.name} – {location.lat}, {location.lng}
-      </li>
+      <li key={location.id}>{location.name} – {location.lat}, {location.lng}</li>
     );
   }
 
