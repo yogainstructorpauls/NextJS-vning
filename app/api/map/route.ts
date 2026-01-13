@@ -4,8 +4,8 @@ export async function GET() {
     return Response.json(map)
 }
 
-export async function POST(req:Request){
-    const data = await req.json()
+export async function POST(request:Request){
+    const data = await request.json()
     const newData = {
         id: data.length + 1,
         name: data.name,
@@ -13,5 +13,5 @@ export async function POST(req:Request){
         lng: data.lng
     }
     map.push(newData)
-    return Response.json({msg: "Added successful"})
+    return Response.json({msg: "Added successfully"})
 }
